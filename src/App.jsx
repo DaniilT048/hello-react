@@ -1,19 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Button from './components/Button.jsx'
 import InputComponent from "./components/Input.jsx";
 
 function App() {
+    const [text, setText] = useState('')
   return (
     <>
         <div>
-            <InputComponent/>
-            <p className='inputText'>Text from input:</p>
+            <InputComponent value={text} onChange={setText}/>
+            <p>Text from input:{text}</p>
         </div>
       <div>
-        <Button start = {1} text ='number is'></Button>
+        <Button start = {1} textButton ='number is'></Button>
       </div>
     </>
   )

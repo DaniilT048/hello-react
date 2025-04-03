@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './Button.css'
 
-function Button ({start, onClick, text}) {
+function Button ({start, text}) {
     const [count, setCount] = useState(start);
 
     const onButtonClick = () => {
